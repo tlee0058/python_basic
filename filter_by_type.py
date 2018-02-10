@@ -23,21 +23,24 @@ mL = [3,5,7,34,3,2,113,65,8,89]
 lL = [4,34,22,68,9,13,3,5,7,9,2,12,45,923]
 eL = []
 spL = ['name','address','phone number','social security number']
-
-x = 45
-if x >= 100:
-    print ("That's a big number")
-
-if x < 100:
-    print ("That a small number")
-y = "hello world how are yall"
-if len(y) >= 50:
-    print ("Long Sentence")
-if len(y) < 50:
-    print ("short sentence")
-
-lL = [4,34,22,68,9,13,3,5,7,9,2,12,45,923]
-if len(lL) >= 10:
-    print("Big List!")
-if len(lL) < 10:
-    print("Short List")
+testList = [sI, mI, bI, eI, spI, sS, mS, bS, eS, aL, mL, lL, eL, spL]
+for i in range(len(testList)):
+    print "example#:", i, "example: ", testList[i], " type: ", type(testList[i])
+    # Integer: If the integer is greater than or equal to 100, print "That's a big number!" If the integer is less than 100, print "That's a small number"
+    if(type(testList[i]) is int):
+        if(testList[i] < 100):
+            print "That's a small number"
+        else:
+            print "That's a big number!"
+    # String: If the string is greater than or equal to 50 characters print "Long sentence." If the string is shorter than 50 characters print "Short sentence."
+    if(type(testList[i]) is str):
+        if(len(testList[i]) < 50):
+            print "Short sentence."
+        else:
+            print "Long sentence."
+    # List: If the length of the list is greater than or equal to 10 print "Big list!" If the list has fewer than 10 values print "Short list."
+    if(type(testList[i]) is list):
+        if(len(testList[i]) < 10):
+            print "Short list."
+        else:
+            print "Big list!" 
