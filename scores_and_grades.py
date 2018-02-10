@@ -25,7 +25,24 @@ for i in range(11):
 
 
     
+def grade(score):
+    letter = "F"
+    if (score >= 90):
+        letter = "A"
+    elif (score >= 80):
+        letter = "B"
+    elif (score >= 70):
+        letter = "C"
+    elif (score >= 60):
+        letter = "D"
+    return letter
 
+import random
+for i in range(10):
+    random_num = random.randrange(100)
+    gr = grade(random_num )
+    print "Score: ", random_num, " ; Your grade is", gr
+print "End of the program. Bye!"
 
 
 
