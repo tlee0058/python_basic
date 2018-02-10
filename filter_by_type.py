@@ -3,36 +3,26 @@ In this string: words = "It's thanksgiving day. It's my birthday,too!" print the
 
 Min and Max
 Print the min and max values in a list like this one: x = [2,54,-2,7,12,98]. Your code should work for any list.
+''' Write a program that, given some value, tests that value for its type. Here's what you should do for each type:
+Integer: If the integer is greater than or equal to 100, print "That's a big number!" If the integer is less than 100, print "That's a small number"
+String: If the string is greater than or equal to 50 characters print "Long sentence." If the string is shorter than 50 characters print "Short sentence."
+List: If the length of the list is greater than or equal to 10 print "Big list!" If the list has fewer than 10 values print "Short list." '''
 
-First and Last
-Print the first and last values in a list like this one: x = ["hello",2,54,-2,7,12,98,"world"]. Now create a new list containing only the first and last values in the original list. Your code should work for any list.
-
-New List
-Start with a list like this one: x = [19,2,54,-2,7,12,98,32,10,-3,6]. Sort your list first. Then, split your list in half. Push the list created from the first half to position 0 of the list created from the second half. The output should be: [[-3, -2, 2, 6, 7], 10, 12, 19, 32, 54, 98]. Stick with it, this one is tough!"""
-
-# words = "It's thanksgiving day. It's my birthday, too!"
-
-# Assignment: Multiples, Sum, Average
-#This assignment has several parts. All of your code should be in one file that is well commented to indicate what each block of code is doing and which problem you are solving. Don't forget to test your code as you go!#
-
-#Multiples
-
-# Python / Django Online Python Fundamentals v1.1 Python Fundamentals Filter by Type Ting Hello,  Ting L  
-# CHECKLIST
-# MandatoryDeadline: Monday of Week 1Difficulty Level: BasicEstimated Time: 30min
-# Assignment: Filter by Type
-# Write a program that, given some value, tests that value for its type. Here's what you should do for each type:
-
-# Integer
-# If the integer is greater than or equal to 100, print "That's a big number!" If the integer is less than 100, print "That's a small number"
-
-# String
-# If the string is greater than or equal to 50 characters print "Long sentence." If the string is shorter than 50 characters print "Short sentence."
-
-# List
-# If the length of the list is greater than or equal to 10 print "Big list!" If the list has fewer than 10 values print "Short list."
-
-# Test your program using these examples:
+#Test your program using these examples:
+sI = 45
+mI = 100
+bI = 455
+eI = 0
+spI = -23
+sS = "Rubber baby buggy bumpers"
+mS = "Experience is simply the name we give our mistakes"
+bS = "Tell me and I forget. Teach me and I remember. Involve me and I learn."
+eS = ""
+aL = [1,7,4,21]
+mL = [3,5,7,34,3,2,113,65,8,89]
+lL = [4,34,22,68,9,13,3,5,7,9,2,12,45,923]
+eL = []
+spL = ['name','address','phone number','social security number']
 
 x = 45
 if x >= 100:
