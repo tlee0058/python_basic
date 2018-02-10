@@ -13,6 +13,16 @@ tup = tuple(my_dict.items())
 
 print tup
 
+def dict_to_list_of_tuples(obj):
+    list_tuples = []
+    for key,value in obj.iteritems():
+        new_tuple = (key, value)
+        # print new_tuple
+        list_tuples.append(new_tuple)
+    return list_tuples
+        
+print "list of tuples:", dict_to_list_of_tuples(my_dict)
+
 
 
 
