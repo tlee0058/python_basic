@@ -50,22 +50,20 @@ print x
 # output
 >>>[[1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]"""
 
-def multiply(a, mult):
-    for i in range(len(a)):
-        a[i] *= mult
-    print a
+def layered_multiples(arr):
 
+    # Creates a list containing numRows lists, each of numCols items, all set to " "
+    layered_arr = []
+    for i in arr:
+        new_arr = []
+        #create a list containing arr[i] 1s as element new_arr[i]
+        for j in range(0, i):
+            # new_arr[i][j] = 1
+            new_arr.append(1)
+        layered_arr.append(new_arr)
+    return layered_arr
 
-
-def layered_multiples(multiply(a, mult)):
-    new_array = []
-    for i in range(len(multiply(a, mult))):
-        for j in i:
-            
-            new_array[i].append(1)
-    return new_array
-
+print multiply([2,4,5],3)
 x = layered_multiples(multiply([2,4,5],3))
 print x
-        
 
