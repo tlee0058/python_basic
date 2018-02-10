@@ -13,21 +13,22 @@ Attempt #5000: Throwing a coin... It's a head! ... Got 2412 head(s) so far and 2
 Ending the program, thank you!
 Hint: Use the python built-in round function to convert that floating point number into an integer"""
 
-import random
+def coin():
+    	import random
+	x = 0 
+	y = 0
 
-head_counter = 0
-tail_counter = 0
+	for i in range (1, 51): 
+		random_number = random.random()
+ 
+		if round(random_number) == 1: 
+			x = x + 1 
+			print 'Attempt #' ,i, ': Throwing a coin... Its a head!... Got' ,x, 'head(s) so far and' ,y, 'tail(s) so far'
+		elif round(random_number) ==0:
+			y = y +1 
+			print 'Attempt #' ,i, ': Throwing a coin... Its a tails!... Got' ,x, 'head(s) so far and' ,y, 'tail(s) so far'
 
-for i in range(1, 100):
-    result = random.choice(['head', 'tail'])
-    if result == "head":
-        head_counter += 1
-        print "Attempt #{}: Throwing a coin...It's a {}! ... Got {} head(s) so far and {} tail(s) so far". format(i, result, head_counter, tail_counter)
-    elif result == "tail":
-        tail_counter += 1
-        print "Attempt #{}: Throwing a coin...It's a {}! ... Got {} head(s) so far and {} tail(s) so far". format(i, result, head_counter, tail_counter)
-    else:
-        pass
+coin()
         
 
     
