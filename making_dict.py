@@ -1,55 +1,53 @@
-"""Assignment: Making Dictionaries
-Create a function that takes in two lists and creates a single dictionary. The first list contains keys and the second list contains the values. Assume the lists will be of equal length.
-
+''' Assignment: Making Dictionaries -- Create a function that takes in two lists and creates a single dictionary. The first list contains keys and the second list contains the values. Assume the lists will be of equal length.
 Your first function will take in two lists containing some strings. Here are two example lists:
-"""
+name = ["Anna", "Eli", "Pariece", "Brendan", "Amy", "Shane", "Oscar"]
+favorite_animal = ["horse", "cat", "spider", "giraffe", "ticks", "dolphins", "llamas"]
+Here's some help starting your function.
+def make_dict(list1, list2):
+  new_dict = {}
+  # your code here
+  return new_dict
+'''
+
 name = ["Anna", "Eli", "Pariece", "Brendan", "Amy", "Shane", "Oscar"]
 favorite_animal = ["horse", "cat", "spider", "giraffe", "ticks", "dolphins", "llamas"]
 
-# comboList = zip(name, favorite_animal)
-
-
-# new_dict = dict(comboList)
-# print new_dict
-
 def make_dict(list1, list2):
     new_dict = {}
-    for i in list1:
-        pass
-    for j in list2:
-        pass
-    new_dict.fromkeys(i, [j])
+    n = len(list1) # and can assume n = len(list2) also
+    for i in range( n ):
+        new_dict[list1[i]] = list2[i]
+    return new_dict
 
-    print new_dict
+print make_dict(name, favorite_animal)
 
-make_dict(name, favorite_animal)
+#Hacker Challenge: If the lists are of unequal length, the longer list should be used for the keys, the shorter for the values. 
+print "\n", "------- Hacker Challenge --------"
+name = ["Anna", "Eli", "Pariece", "Brendan", "Amy", "Shane", "Oscar"]
+favorite_animal = ["horse", "cat", "spider", "giraffe", "ticks", "dolphins", "llamas"]
+name2 = ["Anna", "Eli", "Pariece", "Brendan", "Amy", "Shane", "Oscar", "Charlie", "Theodore"]
+favorite_animal2 = ["horse", "cat", "spider", "giraffe", "ticks", "dolphins", "llamas","elephant","zebra","whale"]
 
-def printDict(obj):
-    # print all keys and values in dictionary
-    for key,value in obj.iteritems():
-        print "My", key,"is", value
+def make_dict2(list1, list2):
+    new_dict = {}
+    n2 = max(len(list1), len(list2))
+    n1 = min(len(list1), len(list2))
+    # print " min & max list length:", n1, n2
+    for i in range( n1 ):
+        if(len(list1)>=len(list2)):
+            new_dict[list1[i]] = list2[i]
+            for j in range(n1, n2):
+                new_dict[list1[j]] = ''
+        else:
+            new_dict[list2[i]] = list1[i] 
+            for j in range(n1, n2):
+                new_dict[list2[j]] = ''           
+    return new_dict
 
-    #look at other ways to print dictionary
-    print "\n", "---- other ways to print dictionary ----"
-
-    #print all keys
-    print "\n", "Print all keys:"
-    for data in obj:
-        print data
-
-    #another way to print all keys
-    print "\n", "Print all keys another way:"
-    for obj_key in obj.iterkeys():
-        print obj_key
-
-    #to print the values
-    print "\n", "Print all values:"
-    for val in obj.itervalues():
-        print val
-
-printDict(myself)
-
-
+print "\n Case with name list longer"
+print make_dict2(name2, favorite_animal)
+print "\n Case with favorite_animal list longer"
+print make_dict2(name, favorite_animal2)
 
 
 
