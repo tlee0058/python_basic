@@ -31,3 +31,34 @@ for items in l:
 for num in l:
     if(type(num)== int):
         print(num)
+        
+l1 = ['magical unicorns',19,'hello',98.98,'world']
+l2 = [2,3,1,7,4,12]
+l3 = ['magical','unicorns']
+l4 = [2, [55,77,33], 2.1, "end of list"]
+
+def typeList(arr):
+    sum = 0
+    new_str = ""
+    arrType = [0, 0, 0]
+    
+    for i in range(len(arr)):
+        if type(arr[i]) is str:
+            
+            arrType[0] += 1 
+            
+        if type(arr[i]) is int or type(arr[i]) is float:
+            sum += arr[i]
+            arrType[1] += 1
+
+    if arrType[0] == len(arr):
+         print "All string"
+    if arrType[1] == 
+    else:
+         print "mixed type"      
+    
+
+typeList(l1)
+typeList(l2)
+typeList(l3)
+typeList(l4)
