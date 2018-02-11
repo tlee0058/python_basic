@@ -30,7 +30,28 @@ def coin():
 
 coin()
         
+import random
+def toss():
+    result = 'head'
+    # get uniform(0,1) random number
+    x = random.random()
+    # print x
+    #if random number <=.5 return 'head'; if it's > .5 return 'tail'
+    if( x > .5):
+        result = 'tail'
+    return result
 
+# for loop to generate 5,000 coin tosses and print/tally results
+tally_heads = 0
+tally_tails = 0
+for i in range(5000):
+    this_toss = toss()
+    if (this_toss == 'head'):
+        tally_heads += 1
+    else:
+        tally_tails += 1
+    print "Attempt #{}: Throwing a coin... It's a {}! ... Got {} head(s) so far and {} tail(s) so far".format(i+1, this_toss, tally_heads, tally_tails)
+print "Ending the program, thank you!"
     
 
 
