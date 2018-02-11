@@ -9,62 +9,20 @@ The result should be like this:"""
 
 import random
 
-
-for i in range(11):
-    random_num = int(random.random()*100)
-    if random_num in range(60, 70):
-        print "Score: {}; Your grade is B".format(random_num)
-    elif random_num in range(70, 80):
-        print "Score: {}; Your grade is C".format(random_num)
-    elif random_num in range(80, 90):
-        print "Score: {}; Your grade is B".format(random_num)
-    elif random_num in range(90, 100):
-        print "Score: {}; Your grade is A".format(random_num)
-    else:
-        print "below D"
-
-
-    
-def grade(score):
-    letter = "F"
-    if (score >= 90):
-        letter = "A"
-    elif (score >= 80):
-        letter = "B"
-    elif (score >= 70):
-        letter = "C"
-    elif (score >= 60):
-        letter = "D"
-    return letter
-
-import random
 for i in range(10):
-    random_num = random.randrange(100)
-    gr = grade(random_num )
-    print "Score: ", random_num, " ; Your grade is", gr
-print "End of the program. Bye!"
-
-import random
-def toss():
-    result = 'head'
-    # get uniform(0,1) random number
-    x = random.random()
-    # print x
-    #if random number <=.5 return 'head'; if it's > .5 return 'tail'
-    if( x > .5):
-        result = 'tail'
-    return result
-
-# for loop to generate 5,000 coin tosses and print/tally results
-tally_heads = 0
-tally_tails = 0
-for i in range(5000):
-    this_toss = toss()
-    if (this_toss == 'head'):
-        tally_heads += 1
+    rnum = random.randint(60, 100)
+    
+    if rnum in range(60, 70):
+        print rnum, "Grade - D"
+    elif rnum in range (70, 80):
+        print rnum, "Grade - C"
+    elif rnum in range (80, 90):
+        print rnum, "Grade - B"
     else:
-        tally_tails += 1
-    print "Attempt #{}: Throwing a coin... It's a {}! ... Got {} head(s) so far and {} tail(s) so far".format(i+1, this_toss, tally_heads, tally_tails)
-print "Ending the program, thank you!"
+        print rnum, "Grade - A"
+    
+
+ 
+
 
 
