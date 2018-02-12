@@ -67,3 +67,15 @@ print multiply([2,4,5],3)
 x = layered_multiples(multiply([2,4,5],3))
 print x
 
+
+def multilayers(arr):
+    layered_list = []
+    for i in range(len(arr)):
+        
+        new_list = []
+        for num in range(arr[i]):
+            new_list.append(1)
+        layered_list.append(new_list)
+     
+    print layered_list
+multilayers([1,2,3,4])
