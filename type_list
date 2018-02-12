@@ -67,3 +67,47 @@ typeList(l1)
 typeList(l2)
 typeList(l3)
 typeList(l4)
+
+
+
+l1 = ['magical unicorns',19,'hello',98.98,'world']
+l2 = [2,3,1,7,4,12]
+l3 = ['magical','unicorns']
+l4 = [2, [55,77,33], 2.1, "end of list"]
+
+def list_label(arr):
+    list_type= None
+    master_string =""
+    master_sum = 0
+    
+    
+    for val in arr:
+        if (type(val) == str):
+            master_string += " " + val
+            if list_type == None:
+                list_type = "String"
+            elif list_type == "Integer" or list_type == "Float":
+                list_type = "Mixed"
+                
+        elif(type(val) == int):
+            master_sum += val
+            if list_type == None:
+                list_type = "Integer"
+            elif list_type == "String" or list_type == "Float":
+                list_type = "Mixed"
+                
+        elif (type(val) == float):
+            master_sum += val
+            if list_type == None:
+                list_type = "Float"
+            elif list_type == "String" or list_type == "Integer":
+                list_type = "Mixed"
+            
+    print list_type
+    print master_string
+    print master_sum
+list_label(l1)
+list_label(l2)
+list_label(l3)
+list_label(l4)
+
